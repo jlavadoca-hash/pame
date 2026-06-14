@@ -1,0 +1,327 @@
+{
+  "categories": {
+    "tshirt": "Camisetas",
+    "crop": "Tops Cortos",
+    "oversized": "Oversized",
+    "polo": "Polos y Camisas",
+    "tank": "Tirantes",
+    "longsleeve": "Manga Larga"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Frog Graphic Tee",
+      "category": "tshirt",
+      "price": 12.50,
+      "minOrder": 50,
+      "image": "data/assets/polo1.png",
+      "description": "Adorable camiseta color crema con estampado de rana alada y destellos mágicos. Diseño artístico juguetón sobre algodón premium.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "White Bustier Crop Top",
+      "category": "crop",
+      "price": 13.00,
+      "minOrder": 50,
+      "image": "data/assets/polo2.png",
+      "description": "Elegante top corto tipo bustier blanco con detalle fruncido central y tirantes ajustables.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo2.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo2-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo2-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo2-3.png" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Striped Tank Crop",
+      "category": "crop",
+      "price": 11.50,
+      "minOrder": 50,
+      "image": "data/assets/polo3.jpg",
+      "description": "Top corto de tirantes con rayas horizontales negras y blancas. Diseño náutico clásico.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo3.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo3-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo3-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo3-3.png" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "White Collared Shirt",
+      "category": "polo",
+      "price": 12.00,
+      "minOrder": 50,
+      "image": "data/assets/polo4.jpg",
+      "description": "Camisa blanca de manga corta con cuello formal y botones frontales.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Navy Ringer Tee",
+      "category": "oversized",
+      "price": 14.00,
+      "minOrder": 50,
+      "image": "data/assets/polo5.jpg",
+      "description": "Camiseta oversized color crema con ribete azul marino en cuello y mangas.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Gray Striped Oversized",
+      "category": "oversized",
+      "price": 15.00,
+      "minOrder": 50,
+      "image": "data/assets/polo6.jpg",
+      "description": "Camiseta oversized gris con finas rayas blancas horizontales.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "White Peplum Top",
+      "category": "polo",
+      "price": 16.50,
+      "minOrder": 50,
+      "image": "data/assets/polo7.jpg",
+      "description": "Top blanco tipo babydoll con escote cuadrado y mangas volantadas.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Pink Basic Oversized",
+      "category": "polo",
+      "price": 17.50,
+      "minOrder": 50,
+      "image": "data/assets/polo8.jpg",
+      "description": "Camiseta básica oversized en rosa suave con corte relajado.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Polka Dot Halter Tank",
+      "category": "tank",
+      "price": 10.00,
+      "minOrder": 50,
+      "image": "data/assets/polo9.jpg",
+      "description": "Tirante halter con lunares negros y detalle de lazada en el cuello.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Gray Cropped Racerback",
+      "category": "tank",
+      "price": 11.00,
+      "minOrder": 50,
+      "image": "data/assets/polo10.jpg",
+      "description": "Tirante deportivo gris con espalda racerback y cordones laterales.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Character Print Long Sleeve",
+      "category": "longsleeve",
+      "price": 15.50,
+      "minOrder": 50,
+      "image": "data/assets/polo11.jpg",
+      "description": "Camiseta de manga larga color crema con estampado multicolor de personajes.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Apple Embroidered Tee",
+      "category": "tshirt",
+      "price": 13.50,
+      "minOrder": 50,
+      "image": "data/assets/polo12.jpg",
+      "description": "Camiseta off-shoulder color crema con bordado de manzana roja.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Floral Square Neck Tank",
+      "category": "tank",
+      "price": 12.00,
+      "minOrder": 50,
+      "image": "data/assets/polo13.jpg",
+      "description": "Tirante con escote cuadrado y estampado floral delicado en tonos pasteles.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Navy Oversized Crop",
+      "category": "crop",
+      "price": 13.00,
+      "minOrder": 50,
+      "image": "data/assets/polo14.jpg",
+      "description": "Top corto oversized en azul marino con corte relajado.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "All-Over Print Henley",
+      "category": "longsleeve",
+      "price": 16.00,
+      "minOrder": 50,
+      "image": "data/assets/polo15.jpg",
+      "description": "Henley de manga larga color crema con estampado vibrante de personajes.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "One-Shoulder Ruched Top",
+      "category": "polo",
+      "price": 18.00,
+      "minOrder": 50,
+      "image": "data/assets/polo16.jpg",
+      "description": "Top asimétrico de un solo hombro con drapeado elegante y textura fruncida.",
+      "allowLogoUpload": false,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "One-Shoulder Ruched Top",
+      "category": "polo",
+      "price": 18.00,
+      "minOrder": 50,
+      "image": "data/assets/polo17.jpg",
+      "description": "Top asimétrico de un solo hombro con drapeado elegante y textura fruncida.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "One-Shoulder Ruched Top",
+      "category": "polo",
+      "price": 18.00,
+      "minOrder": 50,
+      "image": "data/assets/polo18.jpg",
+      "description": "Top asimétrico de un solo hombro con drapeado elegante y textura fruncida.",
+      "allowLogoUpload": true,
+      "availableColors": [
+        { "name": "Blanco", "hex": "#ffffff", "image": "data/assets/polo1.png" },
+        { "name": "Rosa Pastel", "hex": "#fbcfe8", "image": "data/assets/polo1-1.png" },
+        { "name": "Amarillo Suave", "hex": "#fef9c3", "image": "data/assets/polo1-2.png" },
+        { "name": "Verde Menta", "hex": "#bbf7d0", "image": "data/assets/polo1-3.png" }
+      ]
+    }
+  ],
+  "materials": [
+    { "id": "cotton", "name": "Mezcla de Algodón Premium", "priceAdd": 0 },
+    { "id": "organic", "name": "Algodón Orgánico 100%", "priceAdd": 2.50 },
+    { "id": "dryfit", "name": "Tecnología Dry-Fit", "priceAdd": 1.50 },
+    { "id": "linen", "name": "Mezcla de Lino", "priceAdd": 3.50 }
+  ],
+  "colors": {
+    "pastels": [
+      { "name": "Rosa Pastel", "hex": "#fbcfe8", "class": "bg-pink-200" },
+      { "name": "Azul Pastel", "hex": "#bfdbfe", "class": "bg-blue-200" },
+      { "name": "Verde Menta", "hex": "#bbf7d0", "class": "bg-green-200" },
+      { "name": "Amarillo Suave", "hex": "#fef9c3", "class": "bg-yellow-100" }
+    ],
+    "neutrals": [
+      { "name": "Blanco", "hex": "#ffffff", "class": "bg-white border" },
+      { "name": "Crema", "hex": "#fef3c7", "class": "bg-amber-50" },
+      { "name": "Gris", "hex": "#6b7280", "class": "bg-gray-500" },
+      { "name": "Negro", "hex": "#000000", "class": "bg-black" }
+    ],
+    "vibrant": [
+      { "name": "Rojo", "hex": "#ef4444", "class": "bg-red-500" },
+      { "name": "Azul Royal", "hex": "#2563eb", "class": "bg-blue-600" },
+      { "name": "Verde", "hex": "#22c55e", "class": "bg-green-500" }
+    ]
+  },
+  "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+  "patterns": ["Liso", "Rayado", "Estampado Gráfico", "Bordado", "Lunares", "Floral"]
+}

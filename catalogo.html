@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Pame - Catálogo Premium</title>
+    <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">D'Pame</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="exportacion.html">Exportación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button id="cart-btn" class="cart-btn">
+                <i class="fas fa-shopping-cart"></i> Carrito
+                <span id="cart-count">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Catálogo -->
+    <header class="catalog-header">
+        <div class="container">
+            <h1>Nuestra Colección</h1>
+            <p>Explora nuestros estilos premium. Pedido mínimo: 50 unidades por diseño.</p>
+            
+            <div class="catalog-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Buscar productos...">
+                </div>
+                <select id="sortSelect">
+                    <option value="relevant">Ordenar por: Relevancia</option>
+                    <option value="price-asc">Precio: Menor a Mayor</option>
+                    <option value="price-desc">Precio: Mayor a Menor</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filtros -->
+    <section class="category-filters-section">
+        <div class="container filter-buttons-wrapper">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="tshirt">Camisetas</button>
+            <button class="filter-btn" data-filter="crop">Tops Cortos</button>
+            <button class="filter-btn" data-filter="oversized">Oversized</button>
+            <button class="filter-btn" data-filter="polo">Polos y Camisas</button>
+            <button class="filter-btn" data-filter="tank">Tirantes</button>
+            <button class="filter-btn" data-filter="longsleeve">Manga Larga</button>
+        </div>
+    </section>
+
+    <!-- Grid de Productos -->
+    <main class="products-area container">
+        <div class="products-info">
+            <span id="productsCount">Cargando productos...</span>
+        </div>
+        
+        <div id="productsGrid" class="product-grid">
+            <!-- Los productos se renderizan aquí vía JS -->
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No encontramos productos</h3>
+            <p>Intenta ajustar tus filtros o términos de búsqueda.</p>
+        </div>
+    </main>
+
+    <!-- ==========================================
+         MODAL DE PERSONALIZACIÓN
+         ========================================== -->
+    <div id="customizationModal" class="modal-overlay">
+        <div class="customization-modal-large">
+            <button class="close-modal" onclick="closeCustomizationModal()">&times;</button>
+            
+            <div class="customization-layout-wide">
+                
+                <!-- COLUMNA IZQUIERDA: VISUALIZADOR -->
+                <div class="preview-gallery-section">
+                    
+                    <!-- Contenedor Principal (Canvas) -->
+                    <div id="mainPreviewContainer" class="main-preview-container">
+                        <!-- Imagen del Polo -->
+                        <img id="mainProductImage" src="" alt="Producto" class="main-product-img">
+                        
+                        <!-- Zona Punteada de Límite (Solo visible si allowLogoUpload es true Y se activa) -->
+                        <div id="customizationZone" class="custom-zone hidden">
+                            <span class="zone-label">Área de Diseño Permitida</span>
+                            
+                            <!-- Logo Arrastrable (Wrapper) -->
+                            <div id="logoWrapper1" class="logo-draggable" style="display: none;">
+                                <!-- La imagen subida irá aquí -->
+                                <img id="uploadedLogoImg1" src="" alt="Tu Logo">
+                                
+                                <!-- Controles Flotantes -->
+                                <div class="floating-controls">
+                                    <button onclick="adjustZoom('logoWrapper1', -0.1)" title="Achicar"><i class="fas fa-minus"></i></button>
+                                    <button onclick="removeLogo('logoWrapper1')" title="Eliminar"><i class="fas fa-trash"></i></button>
+                                    <button onclick="adjustZoom('logoWrapper1', 0.1)" title="Agrandar"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botón Toggle para Activar Personalización (Solo visible si allowLogoUpload es true) -->
+                    <button id="btnToggleUpload" class="btn-toggle-upload" onclick="toggleCustomizationZone()">
+                        <i class="fas fa-paint-brush"></i> ¿Quieres añadir tu propio diseño? Click aquí
+                    </button>
+
+                    <!-- Sección de Inputs de Archivo (Oculta hasta activar) -->
+                    <div id="uploadSection" class="upload-section hidden">
+                        <div class="upload-box">
+                            <p><strong>Paso 1:</strong> Sube tu logo (PNG/JPG)</p>
+                            <label for="imageUpload1" class="btn-upload-small">Seleccionar Archivo</label>
+                            <input type="file" id="imageUpload1" accept="image/*" onchange="handleImageUpload(this, 'logoWrapper1', 'uploadedLogoImg1')">
+                            <p class="hint-text">Arrastra el logo sobre el polo para ubicarlo.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: DETALLES Y CALCULADORA -->
+                <div class="options-panel">
+                    <h2 id="modalProductName">Nombre Producto</h2>
+                    <p class="modal-price" id="modalProductPrice">$0.00 USD</p>
+                    <p id="modalProductDesc" class="product-short-desc">Descripción...</p>
+                    
+                    <div class="option-group">
+                        <label>Color:</label>
+                        <div id="colorSelector" class="color-selector">
+                            <!-- Se llena dinámicamente -->
+                        </div>
+                    </div>
+
+                    <div class="option-row">
+                        <div class="option-group half">
+                            <label>Talla Base:</label>
+                            <select id="sizeSelector" class="form-select">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M" selected>M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
+                        </div>
+                        <div class="option-group half">
+                            <label>Cantidad (Min 50):</label>
+                            <div class="quantity-selector">
+                                <button class="qty-btn" onclick="adjustQuantity(-10)">-</button>
+                                <input type="number" id="quantityInput" value="50" min="50">
+                                <button class="qty-btn" onclick="adjustQuantity(10)">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculadora de Descuentos -->
+                    <div class="discount-calculator-box">
+                        <div class="calc-body">
+                            <div id="tier-1" class="calc-row">50 - 99 uds <span class="calc-disc">5% OFF</span></div>
+                            <div id="tier-2" class="calc-row">100 - 199 uds <span class="calc-disc">10% OFF</span></div>
+                            <div id="tier-3" class="calc-row">200+ uds <span class="calc-disc">15% OFF</span></div>
+                        </div>
+                        <div class="calc-total">
+                            <div>
+                                <span class="total-price-label">Total Estimado:</span>
+                                <div id="savingsDisplay" class="savings-badge" style="display:none;"></div>
+                            </div>
+                            <span id="modalTotalPrice" class="total-price-value">$0.00 USD</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-add-to-cart-final" onclick="addCustomizedToCart()">
+                        <i class="fas fa-shopping-cart"></i> Agregar al Carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrito Sidebar -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button id="close-cart" class="close-cart-btn">&times;</button>
+        </div>
+        <div id="cart-items-container" class="cart-items">
+            <p id="empty-cart-msg" style="text-align:center; padding:20px;">Tu carrito está vacío.</p>
+        </div>
+        <div class="cart-footer">
+            <div id="discount-display" style="display:none; margin-bottom:10px; font-size:0.9rem;"></div>
+            <div class="cart-total-row">
+                <span>Total Estimado:</span>
+                <span id="cart-total-price">$0.00 USD</span>
+            </div>
+            <button id="checkout-btn" class="btn-checkout" disabled>Pedir por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>D'Pame</h4>
+                <p>Premium customized apparel for the world.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="catalogo.html">New Arrivals</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>hello@dpame.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 D'Pame. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- 🤖 CHATBOT WIDGET D'PAME -->
+    <div class="chatbot-widget">
+        <div class="chatbot-window" id="chat-window">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <h4>D'Pame Assistant</h4>
+                    <small>En línea • Respuesta inmediata</small>
+                </div>
+                <button id="chat-close" class="chat-close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-body" id="chat-messages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+                <button id="chat-send" class="chat-send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chatbot-toggle" id="chat-toggle">
+            <i class="fas fa-comment-dots"></i>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>

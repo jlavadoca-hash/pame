@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Pame - Logística y Exportación</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Iconos de FontAwesome (Opcional, pero recomendado para look pro) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR (Copia el mismo bloque de siempre) -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">D'Pame</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="exportacion.html" class="active">Exportación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <button id="cart-btn" class="cart-btn"> Carrito <span id="cart-count">0</span></button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION EXPORTACIÓN -->
+    <header class="export-hero">
+        <div class="container hero-content-export">
+            <h1>Logística Global Sin Fronteras</h1>
+            <p>Llevamos tu marca personal desde Perú hasta cualquier parte del mundo. Gestión integral, segura y transparente.</p>
+            <a href="#shipping-rates" class="btn btn-primary">Ver Tarifas y Tiempos</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN: POR QUÉ ELEGIR NUESTRA LOGÍSTICA -->
+    <section class="features-section container">
+        <div class="section-header">
+            <h2>¿Por qué exportar con D'Pame?</h2>
+            <p>Simplificamos el comercio internacional para que tú te enfoques en tu marca.</p>
+        </div>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-globe-americas"></i>
+                <h3>Cobertura Mundial</h3>
+                <p>Envíos a más de 50 países con alianzas estratégicas con DHL, FedEx y UPS.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <h3>Aduanas Incluidas</h3>
+                <p>Nos encargamos de toda la documentación y trámites aduaneros. Sin sorpresas.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Seguro de Carga</h3>
+                <p>Todos nuestros envíos incluyen seguro contra pérdida o daños durante el tránsito.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-box-open"></i>
+                <h3>Packaging Premium</h3>
+                <p>Empaque reforzado y ecológico para garantizar que tu producto llegue perfecto.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: TABLA DE TIEMPOS Y COSTOS -->
+    <section id="shipping-rates" class="rates-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tiempos de Entrega y Costos Estimados</h2>
+                <p>Transparencia total en tus envíos internacionales.</p>
+            </div>
+
+            <div class="rates-table-wrapper">
+                <table class="rates-table">
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Tiempo Estimado</th>
+                            <th>Costo Base (Hasta 5kg)</th>
+                            <th>Tracking</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>🇴 Colombia</strong> (País Foco)</td>
+                            <td>3 - 5 días hábiles</td>
+                            <td>$15.00 USD</td>
+                            <td><i class="fas fa-check-circle" style="color:var(--success-color)"></i> Sí</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🇺🇸 USA</strong></td>
+                            <td>5 - 7 días hábiles</td>
+                            <td>$25.00 USD</td>
+                            <td><i class="fas fa-check-circle" style="color:var(--success-color)"></i> Sí</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🇪🇺 Europa</strong></td>
+                            <td>7 - 10 días hábiles</td>
+                            <td>$35.00 USD</td>
+                            <td><i class="fas fa-check-circle" style="color:var(--success-color)"></i> Sí</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🌎 Resto del Mundo</strong></td>
+                            <td>10 - 15 días hábiles</td>
+                            <td>$45.00 USD</td>
+                            <td><i class="fas fa-check-circle" style="color:var(--success-color)"></i> Sí</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="rates-note">* Los costos pueden variar según el peso volumétrico. Envío GRATIS en pedidos mayores a $150 USD.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: PROCESO PASO A PASO -->
+    <section class="process-section container">
+        <div class="section-header">
+            <h2>¿Cómo funciona el envío?</h2>
+        </div>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Pedido & Personalización</h3>
+                <p>Eliges tus productos, colores y tallas en nuestro catálogo.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Producción</h3>
+                <p>Fabricamos tu pedido con algodón premium en 3-5 días.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Control de Calidad</h3>
+                <p>Revisamos cada prenda antes de empacarla.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Despacho Internacional</h3>
+                <p>Gestionamos aduana y envío. Te damos tu código de tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+        <div class="container cta-content">
+            <h2>¿Listo para llevar tu marca al siguiente nivel?</h2>
+            <p>Solicita una cotización personalizada para pedidos al por mayor.</p>
+            <a href="contacto.html" class="btn btn-secondary" style="border-color: white; color: white;">Contáctanos Ahora</a>
+        </div>
+    </section>
+
+    <!-- FOOTER (Igual que en las otras páginas) -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4>D'Pame</h4>
+                <p>Exportando estilo peruano al mundo.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>hello@dpame.com</p>
+                <p>+51 999 999 999</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 D'Pame. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- 🤖 CHATBOT WIDGET D'PAME -->
+    <div class="chatbot-widget">
+        <div class="chatbot-window" id="chat-window">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <h4>D'Pame Assistant</h4>
+                    <small>En línea • Respuesta inmediata</small>
+                </div>
+                <button id="chat-close" class="chat-close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chatbot-body" id="chat-messages"></div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." autocomplete="off">
+                <button id="chat-send" class="chat-send-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="chatbot-toggle" id="chat-toggle"><i class="fas fa-comment-dots"></i></div>
+    </div>
+
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
